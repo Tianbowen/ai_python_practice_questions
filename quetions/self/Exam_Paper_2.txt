@@ -1,0 +1,66 @@
+2026-06-13
+总结：
+鸢尾花分3个种类， 山鸢尾，变色鸢尾，维吉尼亚鸢尾
+
+鸢尾花数据集4个特征：花萼长度，花萼宽度，花瓣长度，花瓣宽度
+
+鸢尾花数据集在python安装包是 scikit-learn 原来scikit的简写就是sk
+pip install scikit-learn
+数据集引用使用
+from sklearn.datasets import load_iris
+
+pandas 想象成 功能强大的电子表格软件，完成 数据清晰，整理和分析。核心是 DataFrame
+构造函数(data=数据集合, columns=列名集合)
+df.to_csv('文件路径', index= False) 文件路径, 是否展示索引Index
+
+鸢尾花基本信息：
+iris_dataset.data.shape 数据集行数
+df.head(n=5) // 整数，可选，默认为5
+
+df.describe() // 查看数值列的统计摘要（均值，方差，分位数等）
+
+value_counts 统计每个唯一值出现的次数
+
+sort_index 按索引或行标签或列标签 排序
+
+matplotlib 拆分记 mat plot lib, pyplot 记 py plot。matplotlib 
+
+死记知识点
+plt.rcParams['font.sans-serif'] = ['SimHei'] // 分开 记 font 字体, sans
+plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']
+plt.rcParams['axes.unicode_minus'] = False
+
+plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']
+plt.rcParams['axes.unicode_minus'] = False
+
+// plot 布局的意思
+plt.subplots(2, 2, figsize= (12,10)) 子布局
+figsize
+
+for i, feature in enumerate(集合)
+enumerate
+df.boxplot(column='列明', by = ) // 因为对象是df，所以 数据自然来自 pandas DataFrame对象中
+fig, axes(区域) 
+ax.set_title('标题')
+ax.set_xlabel('类别')
+ax.set_ylabel('数值')
+
+拆分鸢尾花数据集
+
+from sklearn.model_selection import train_test_split
+
+train_feature, test_feature, train_label, test_label = train_test_split(iris_dataset.data, iris_dataset.target, test_size=0.2, random_state= 1)
+
+机器学习三步 创建模型 -> 训练模型 -> 预测与评估
+
+机器学习：从数据中学习规律，对新数据进行预测
+监督学习：训练数据包含输入特征和已知的类别特征
+分类任务：预测样本属于哪个离散的类别
+
+机器学习领域 分类算法：LR逻辑回归 多用于多分类，输出样本属于某一类的概率值
+ SVM支持向量机 直接判断属于哪一类
+ sklearn.linear_model 线性模型 import LogisticRegression
+sklearn.svm import SVC
+
+引入 分层K折，交叉验证
+
