@@ -1,0 +1,8 @@
+要点：
+1. 使用 opencv-python import cv2来完成摄像头调用 非系统库 需要 install
+2. 使用 tkinter 完成程序开发 系统库
+3. 使用 标准代码规范 main() __name__ == "__main__"
+4. 使用 扩展 展示摄像头列表 cv2_enumerate_cameras
+5. 使用 Pillow 图像处理库，因为 tkinter的图像与 opencv的图像不兼容
+
+调用摄像头 cv2.VideoCapture()

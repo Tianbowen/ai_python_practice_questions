@@ -1,3 +1,66 @@
+2026-06-15 总结：
+鸢尾花数据集(iris) 入门级机器学习最经典，最具代表性，分类数据集之一
+安装 scikit-learn 引用 sklearn
+鸢尾花数据集拥有：
+3个种类：山鸢尾，杂色鸢尾，维吉尼亚鸢尾
+4个特征：花萼长度，花萼宽度，花瓣长度，花瓣宽度 Sepal 花萼 Patel花瓣
+
+加载数据集
+iris_dataset = load_iris()
+关键属性 iris_dataset.keys()
+iris_dataset.data[0]
+iris_dataset.target
+iris_dataset.feature_names
+iris_dataset.target_names
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 2026-06-13
 总结：
 鸢尾花分3个种类， 山鸢尾，变色鸢尾，维吉尼亚鸢尾
@@ -63,4 +126,18 @@ train_feature, test_feature, train_label, test_label = train_test_split(iris_dat
 sklearn.svm import SVC
 
 引入 分层K折，交叉验证
+from sklearn.model_selection import StratifiedKFold, cross_val_score
+
+models = {
+    C 正则化强度的倒数 默认1.0
+    solver 优化算法 lbfgs 拟牛顿法的一种，适合中小数据集，处理多分类问题，版本的默认
+    max_iter 求解器的做大迭代次数，默认100
+    'LR': LogisticRegression(C= 1.0, solver='lbfgs', max_iter= 100),
+
+    C 惩罚系数 默认1.0
+    kernel 核函数
+    gamma 核函数系数
+    'SVC': SVC(C= 1.0, kernel='rbf', gamma= 'auto')
+}
+
 
